@@ -3,16 +3,16 @@ from flask_cors import CORS, cross_origin
 import scrape
 import csv
 
-app = Flask(__name__)
-cors = CORS(app)
-app.config['CORS_HEADERS'] = 'Content-Type'
+application = Flask(__name__)
+cors = CORS(application)
+application.config['CORS_HEADERS'] = 'Content-Type'
 
-@app.route("/", methods= ['GET'])
+@application.route("/", methods= ['GET'])
 @cross_origin()
 def origin():
     return render_template('form.html')
 
-@app.route("/data", methods= ['POST'])
+@application.route("/data", methods= ['POST'])
 @cross_origin()
 def data():
     item = request.form.get('item')
@@ -23,6 +23,6 @@ def data():
 
 
 if(__name__ == "__main__"):
-    app.run(host='0.0.0.0')
+    application.run(host='0.0.0.0')
 
 
