@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NewEgg Scalper</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+</head>
+<body class="bg-slate-900 text-white dark:bg-black dark:text-white">
+<form class="w-full h-screen flex flex-col gap-y-5 justify-between items-center" action="http://localhost:5000/data" method="post">
+    <div class="w-full p-2 bg-black dark:bg-red-500">
+    <h1 class="text-3xl">NewEgg Scraper</h1>
+  </div>
+  <div class="w-full flex flex-col justify-center items-center gap-y-5">
+    <h2 class="text-center uppercase text-3xl">Description</h2>
+    <input class="p-2 text-black w-full max-w-[50ch] rounded-xl border-black border-2" type="text" name="item" required/></p>
+    <input class="p-2 duration-300 border-2 w-full max-w-[50ch] border-white rounded-xl hover:bg-white hover:text-black hover:scale-110 cursor-pointer" type="submit" value="Get Prices"/>
+  </div>
+  <div class="w-full p-1 bg-red-500 flex justify-center">
+    <p>Made by Rom</p>
+  </div>
+</form>
+</body>
+</html>
+
